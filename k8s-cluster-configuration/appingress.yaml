@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  namespace: cyangate
+  name: appingress
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: cyangate-task
+spec:
+  rules:
+    - host: dohook.site
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: frontend
+                port:
+                  number: 80
