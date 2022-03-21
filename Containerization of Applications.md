@@ -16,11 +16,13 @@ mv ./target/backend-0.0.1-SNAPSHOT.jar ./rest-service.jar
 ```
 ## Build the Docker Image
 ```
-docker build -t apismellifica/spring-boot-enpoint:1.0
+docker build -t apismellifica/spring-boot-enpoint:1.2 .
+docker build -t europe-central2-docker.pkg.dev/cyangate/task-repo/spring-boot-enpoint:1.2 .
 ```
 * Example: docker build -t myreponame:projectname:tag [docker build](https://docs.docker.com/engine/reference/commandline/build/)
 ## Push the Image to Docker Hub
 ```
-docker push apismellifica/spring-boot-enpoint:1.0
+docker push apismellifica/spring-boot-enpoint:1.2
+docker push europe-central2-docker.pkg.dev/cyangate/task-repo/spring-boot-enpoint:1.2
 ```
 * Example: docker push registryhost [docker push](https://docs.docker.com/engine/reference/commandline/push/)
