@@ -67,6 +67,15 @@ public class ServerInfoController {
     }
 }
 ```
+In backend module, was used 1 controller:
+
+```ServerInfoController``` .
+
+```ServerInfoController``` in this class consists of 1 method that lists all server information that was defined in dto/ServerInfo.java constructor.
+
+# Get Started
+
+## Prerequisites
 In backend module, was used 1 controller
 
 ```ServerInfoController``` .
@@ -76,3 +85,17 @@ In backend module, was used 1 controller
 # Get Started
 
 ## Prerequisites
+
+1. Make sure to install [Java](https://www.java.com/download/) 11 and [Maven](https://maven.apache.org)
+2. Download the project using git: 
+```
+git clone https://github.com/bilgekaan06/Google-K8S-Engine-Server-Status-Backend-Module.git
+```
+3. To install all dependencies
+```
+mvn install (for windows .\mvnw)
+```
+4. Then run the project
+```
+mvn spring-boot:run
+```
