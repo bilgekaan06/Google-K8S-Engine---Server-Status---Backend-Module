@@ -4,9 +4,9 @@
 * ## Prerequisites
 * Firstly, backup all project directory
 ```
-zip -r frontend-app.zip frontend-app/
+zip -r backend-app.zip backend-app/
 ```
-* Change the current working directory to backend-app then to obtain the maven artifact of the application run the following commands:
+* Change the current working directory to backend-app then to obtain the maven artifact of the application run the following command:
 ```
 mvn clean && mvn package -DskipTests
 ```
