@@ -1,9 +1,9 @@
 # Upload the Project Google Cloud
-* To run all application and its replicas on Google Kubernetes Engine follow the instructions.
+* To run the application and its replicas effectively on Google Kubernetes Engine follow the instructions.
 ## Prerequisites
 1. Create a Google Cloud project: [Creating by Google Console](https://cloud.google.com/resource-manager/docs/creating-managing-projects)
 2. Create Kubernetes Cluster: [Creating by Google Console](https://cloud.google.com/kubernetes-engine/docs/deploy-app-cluster)
-3. If you want to use your own machine cli, you should install gcloud cli and should bind your google account. [Installation steps for some distribution](https://cloud.google.com/sdk/docs/install#linux)
+3. If you want to use your own machine-CLI, you should install GCLOUD-CLI and bind your google account. [Installation steps for some distribution](https://cloud.google.com/sdk/docs/install#linux)
 ```
 gcloud init
 ```
@@ -34,7 +34,7 @@ gcloud container clusters create cyangate-task \
     --node-locations  europe-central2-a
     --num-nodes 3
 ```
-7.  To determine which pods will run on which nodes run the following commands:
+7.  To determine which pods will run on which nodes, run the following commands:
 ```
 node1=$(kubectl get no -o jsonpath="{.items[0].metadata.name}")
 node2=$(kubectl get no -o jsonpath="{.items[1].metadata.name}")
