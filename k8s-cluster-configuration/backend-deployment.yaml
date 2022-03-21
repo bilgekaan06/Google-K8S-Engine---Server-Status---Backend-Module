@@ -20,3 +20,8 @@ spec:
           image: europe-central2-docker.pkg.dev/cyangate/task-repo/spring-boot-enpoint:1.2
           ports:
             - containerPort: 8080
+      tolerations:
+        - key: "tier"
+          operator: "Equal"
+          value: "backend"
+          effect: "NoSchedule"
