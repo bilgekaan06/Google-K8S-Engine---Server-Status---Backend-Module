@@ -16,13 +16,7 @@ echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https:/
 sudo apt-get update
 sudo apt-get install -y kubectl
 ```
-5. Create a new folder in your machine and create .yaml files for building cluster.
+5. Change the current working directory to "k8s-cluster-configuration" and run the following command:
 ```
-mkdir task-1-k8s-cluster-configuration
-cd task-1-k8s-cluster-configuration
-touch frontend-service.yaml
-touch frontend-deployment.yaml
-touch backend-service.yaml
-touch backend-deployment.yaml
-touch appingress.yaml
+kubectl apply -f .
 ```
