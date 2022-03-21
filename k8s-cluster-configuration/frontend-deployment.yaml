@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: frontend-app
-          image: europe-central2-docker.pkg.dev/cyangate/task-repo/vuejs-frontend
+          image: europe-central2-docker.pkg.dev/cyangate/task-repo/vuejs-frontend:1.6
           ports:
             - containerPort: 80
       tolerations:
