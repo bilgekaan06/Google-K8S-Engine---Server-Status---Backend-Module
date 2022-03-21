@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: frontend-app
-          image: apismellifica/vuejs-frontend:1.4
+          image: europe-central2-docker.pkg.dev/cyangate/task-repo/vuejs-frontend
           ports:
             - containerPort: 80
