@@ -20,7 +20,7 @@ docker build -t apismellifica/spring-boot-enpoint:1.2 .
 docker build -t europe-central2-docker.pkg.dev/cyangate/task-repo/spring-boot-enpoint:1.2 .
 ```
 * Example: docker build -t myreponame:projectname:tag [docker build](https://docs.docker.com/engine/reference/commandline/build/)
-## Push the Image to Docker Hub
+## Push the Image to Docker Hub and Google Cloud Artifact Registry
 ```
 docker push apismellifica/spring-boot-enpoint:1.2
 docker push europe-central2-docker.pkg.dev/cyangate/task-repo/spring-boot-enpoint:1.2
