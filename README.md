@@ -71,4 +71,8 @@ In backend module, was used 1 controller
 
 ```ServerInfoController``` .
 
-```ServerInfoController```
+```ServerInfoController``` in this class consists of 1 method that lists all server information that was defined in dto/ServerInfo.java constructor.
+
+# Get Started
+
+## Prerequisites
