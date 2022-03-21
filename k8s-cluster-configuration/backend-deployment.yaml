@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: backend-app
-          image: apismellifica/spring-boot-enpoint:1.2
+          image: europe-central2-docker.pkg.dev/cyangate/task-repo/spring-boot-enpoint:1.2
           ports:
             - containerPort: 8080
