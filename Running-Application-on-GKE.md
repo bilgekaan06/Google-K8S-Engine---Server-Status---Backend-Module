@@ -16,7 +16,36 @@ echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https:/
 sudo apt-get update
 sudo apt-get install -y kubectl
 ```
-5. Change the current working directory to "k8s-cluster-configuration" and run the following command:
+
+5. Creating Artifact Repository For Docker Images and Permission Settings
+```
+gcloud artifacts repositories create task-repo \
+ --repository-format=docker \
+ --location=europe-central2 \
+ --description="Docker repository"
+ 
+ gcloud auth configure-docker europe-central2-docker.pkg.dev
+```
+6. A kubernetes cluster is created using the gcloud-cli.
+```
+gcloud container clusters create cyangate-task \
+    --release-channel regular \
+    --zone  europe-central2-a \
+    --node-locations  europe-central2-a
+    --num-nodes 3
+```
+7.  To determine which pods will run on which nodes run the following commands:
+```
+node1=$(kubectl get no -o jsonpath="{.items[1].metadata.name}")
+node2=$(kubectl get no -o jsonpath="{.items[2].metadata.name}")
+node3=$(kubectl get no -o jsonpath="{.items[3].metadata.name}")
+
+kubectl taint node $node1 tier=backend:NoSchedule
+kubectl taint node $node2 tier=backend:NoSchedule
+kubectl taint node $node3 tier=frontend:NoSchedule
+```
+##Run
+Change the current working directory to "k8s-cluster-configuration" and run the following command:
 ```
 kubectl apply -f .
 ```
