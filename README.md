@@ -75,15 +75,6 @@ In backend module, was used 1 controller:
 
 # Get Started
 
-## Prerequisites
-In backend module, was used 1 controller
-
-```ServerInfoController``` .
-
-```ServerInfoController``` in this class consists of 1 method that lists all server information that was defined in dto/ServerInfo.java constructor.
-
-# Get Started
-
 ### Prerequisites
 
 Make sure to install [Java](https://www.java.com/download/) 11 and [Maven](https://maven.apache.org)
