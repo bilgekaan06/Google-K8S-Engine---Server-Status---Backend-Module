@@ -36,15 +36,15 @@ gcloud container clusters create cyangate-task \
 ```
 7.  To determine which pods will run on which nodes run the following commands:
 ```
-node1=$(kubectl get no -o jsonpath="{.items[1].metadata.name}")
-node2=$(kubectl get no -o jsonpath="{.items[2].metadata.name}")
-node3=$(kubectl get no -o jsonpath="{.items[3].metadata.name}")
+node1=$(kubectl get no -o jsonpath="{.items[0].metadata.name}")
+node2=$(kubectl get no -o jsonpath="{.items[1].metadata.name}")
+node3=$(kubectl get no -o jsonpath="{.items[2].metadata.name}")
 
 kubectl taint node $node1 tier=backend:NoSchedule
 kubectl taint node $node2 tier=backend:NoSchedule
 kubectl taint node $node3 tier=frontend:NoSchedule
 ```
-##Run
+## Run
 Change the current working directory to "k8s-cluster-configuration" and run the following command:
 ```
 kubectl apply -f .
